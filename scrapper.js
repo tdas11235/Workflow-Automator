@@ -23,16 +23,10 @@ Opentab.then(() => driver.manage().setTimeouts({ implicit: 10000 }))
   )
   .then(() => driver.findElement(swd.By.xpath('//*[@id="txtUserName"]')))
   .then((user) => user.sendKeys(process.env.NAME))
-  .then(() => {
-    for (var i = 0; i < 100000000; i++);
-  })
   .then(() => driver.findElement(swd.By.xpath('//*[@id="txtPassword"]')))
   .then((pwd) => pwd.sendKeys(process.env.PWD))
   .then(() => driver.findElement(swd.By.xpath('//*[@id="Login"]')))
   .then((login) => login.click())
-  .then(() => {
-    for (var i = 0; i < 100000000; i++);
-  })
   .then(() =>
     driver.findElement(
       swd.By.xpath(
